@@ -1,0 +1,21 @@
+.chat-side
+
+  .side__header
+
+    .side__header__box
+      %p text
+      .side__header__box__logo       
+        .side__header__box__logo__a
+          =link_to "#", class: "side__header__box__logo" do
+            = icon("fa" , "edit") 
+        .side__header__box__logo__b
+          =link_to "#", class: "side__header__box__logo" do
+            = icon('fa', 'cog')
+        
+  .groups
+    .groups__group
+      %p.groups__group__name test
+      %P.groups__group__text not message
+    .groups__group
+      %p.groups__group__name test
+      %P.groups__group__text not message
