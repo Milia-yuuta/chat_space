@@ -1,0 +1,28 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__group
+        text
+      %ul.main-header__left-box__member
+        member: 
+        %li.main-header__leftbox__member__name
+        Y
+    .main-header__edit
+      Edit
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          y
+        %p.message__upper-info__date
+          2019/11/21
+      %p.message__text
+        no data
+  .form
+    %form.new_message{id:"new_message",enctype:"multipart",action:"message",method:"posts"}
+      .input-box
+        %input.input-box__text{type:"text",placeholder:"type a message"}
+        %label.input-box__image
+          = icon('fa', 'image')
+          %input.input-box__image__file{type:"file", name:"message[image]", id:"message_image"}
+      %input.submit-btn{type:"submit",name:"commit",value:"Send"}

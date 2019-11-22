@@ -28,7 +28,7 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-
+                  
 ## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
