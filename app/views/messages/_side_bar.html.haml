@@ -1,9 +1,9 @@
 .chat-side
-
   .side__header
-
+    %h3.header__name
+      = current_user.name
     .side__header__box
-      %p text
+      %p 
       .side__header__box__logo       
         .side__header__box__logo__a
           =link_to "#", class: "side__header__box__logo" do
