@@ -13,35 +13,38 @@ $section-color-b:#38aef0;
   display: flex;
   align-items: center;
   padding: 0 20px;  
-    &__box{
+  
+    &__name{
       display: flex;
       justify-content: space-between;
       width: 100%;
-      font-weight: bold ;
-        &__logo{
-          display: flex;
-          color:$section-color-a;
-          &__a{
-            margin-left: 0.3rem;
-          }
-          &__b{
-            margin-left: 0.3rem;
-          }
-}}}
+      font-weight: bold ;}
+    &__lists{
+      color: white;
+      display: flex;
+      color:$section-color-a;
+      &__a{
+        margin-left: 0.3rem;
+          }}}
+.icon{
+  color: white;
+}
 
 .groups{
+  box-sizing: border-box;
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
-  overflow: scroll;
-  &__group{
+  .group{
     margin-bottom: 40px;
     &__name{
       font-size: 15px;
       margin-bottom: 5px;
+      color: white;
     }
-    &__text{
+    &__message{
       font-size: 11px;
+      color: white;
     }}}
 
 .chat-main{
@@ -49,16 +52,16 @@ $section-color-b:#38aef0;
   float: left;}
   
 .main-header{
+  box-sizing: border-box;
   height: 100px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
-  overflow: scroll;
   &__left-box{
     margin-top: 35px;
     &__group{
-      font-size: 20px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
     }
@@ -78,10 +81,11 @@ $section-color-b:#38aef0;
     right: 40px;
   }}
 .messages{
-  height: calc(100vh - 265px);
+  box-sizing: border-box;
+  height: calc(100vh - 190px);
   padding: 46px 40px;
   background-color: #fafafa;
-  overflow: scroll;
+  
   margin: 0;
  }
 .message{
