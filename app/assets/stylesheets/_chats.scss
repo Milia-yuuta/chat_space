@@ -69,8 +69,7 @@ $section-color-b:#38aef0;
       display: flex;
     font-size: 12px;
     color: #999999;
-      &__name{       
-      }}}
+      }}
   &__edit{
     height: 40px;
     line-height: 40px;
@@ -81,6 +80,7 @@ $section-color-b:#38aef0;
     right: 40px;
   }}
 .messages{
+  overflow: scroll;
   box-sizing: border-box;
   height: calc(100vh - 190px);
   padding: 46px 40px;
@@ -89,6 +89,7 @@ $section-color-b:#38aef0;
   margin: 0;
  }
 .message{
+  overflow: scroll;
   padding-bottom:40px ;
   &__upper-info{
     display: flex;
@@ -116,33 +117,25 @@ $section-color-b:#38aef0;
   padding: 20px 40px;
   height: 90px;
   .new_message{
+    box-sizing: border-box;
+    padding: 5px 10px;
     display: flex;
+    width: 100%;
+    border: none;
     .input-box{
-      position: relative;
-      width: 100%;
-      &__text{
-        box-sizing: border-box;
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: #434a54;
-        border-style: none;}
+      background-color: white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
       &__image{
+        top: 30px;
         font-size: 1.3rem;
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        line-height: 50px;
+  
         cursor: pointer;
-        &__fa{
-          display: inline-block;
-          font: normal normal normal 14px/1 FontAwesome;
-          font-size: inherit;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-      }
         &__file{
           display: none;}
-    }}
+  }}}
   .submit-btn{
     width: 100px;
     height: 50px;
@@ -151,5 +144,5 @@ $section-color-b:#38aef0;
     background-color: $section-color-b;
     color: $section-color-a;
     cursor: pointer;
-  }}}
+  }}
 
