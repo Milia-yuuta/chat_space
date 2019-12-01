@@ -1,38 +1,30 @@
 $(function(){
-
-
 function buildHTML(message){
-  debugger;
-  var image_url = (message.image)?`<image class="message__text__image" src=${message.image}>`:"";
-  debugger;
+  var image_url = (message.image)? `<image class="message__text__image" src="${message.image}">` :"";
     var html = 
-    `<div class="message" data-message-id=${message.id}>
-    <div class="message__upper-info">
-    <div class="message__upper-info__talker">
-    ${message.user_name}
-    </div>
-    <div class="message__upper-info__date">
-    ${message.date}
-    </div>
-    </div>
-    <div class="message__text">
-    <p class="message__text__content">
-    ${message.content}
-    </p>
-    </div>
-    <img src=${image_url} > 
-    </div>`
-    debugger;
-    return html
-    }
-
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message__upper-info">
+          <div class="message__upper-info__talker">
+            ${message.user_name}
+          </div>
+          <div class="message__upper-info__date">
+            ${message.date}
+          </div>
+        </div>
+          <div class="message__text">
+            <p class="message__text__content">
+            ${message.content}
+            </p>
+        </div>
+      <img src=${image_url} > 
+      </div>`
+      return html
+}
   $("#new_message").on("submit",function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr("action")
     
-
-
     $.ajax({
       url:url,
       type:"POST",
@@ -47,9 +39,7 @@ function buildHTML(message){
       $('form')[0].reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       $(".submit-btn").prop("disabled",false)
-    })
-    
-  })
+    })})
   .fail(function(){
     alert('error');
   });
