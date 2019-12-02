@@ -1,6 +1,6 @@
 $(function(){
 function buildHTML(message){
-  var image_url = (message.image)? `<image class="message__text__image" src="${message.image}">` :"";
+  var image_url = (message.image)? `<image class="message__text__image" src = "${message.image}">` :"";
     var html = 
       `<div class="message" data-message-id=${message.id}>
         <div class="message__upper-info">
@@ -39,9 +39,11 @@ function buildHTML(message){
       $('form')[0].reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       $(".submit-btn").prop("disabled",false)
-    })})
-  .fail(function(){
-    alert('error');
-  });
+    })
+    .fail(function(){
+      alert("errer");
+    });
+  })
+  
   return false;
 });
