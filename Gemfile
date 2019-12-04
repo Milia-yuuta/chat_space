@@ -5,9 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-group :production do
-  gem 'unicorn', '5.4.1'
-end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
@@ -44,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 
@@ -55,8 +54,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'haml-rails'
-  gem 'erb2haml'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -65,10 +63,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'font-awesome-sass'
 gem 'devise'
-gem 'pry-rails'
-gem 'pry-byebug'
-gem 'pry-doc'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'factory_bot_rails'
 gem 'haml-rails'
+gem 'erb2haml'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
