@@ -72,7 +72,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
 gem 'erb2haml'
-
+gem 'fog-aws'
 group :production do
   gem 'unicorn', '5.4.1'
 end
