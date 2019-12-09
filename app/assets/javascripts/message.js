@@ -45,6 +45,7 @@ function buildHTML(message){
     });
   })
   
+  
 
   var reloadMessages = function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){

@@ -1,6 +1,10 @@
 $section-color-a:white;
 $section-color-b:#38aef0;
 
+*{
+  text-decoration: none;
+}
+
 .chat-side{
   width: 300px;
   float: left;
@@ -78,6 +82,7 @@ $section-color-b:#38aef0;
     border: solid 1px $section-color-b;
     color: $section-color-b;
     right: 40px;
+    
   }}
 .messages{
   overflow: scroll;
